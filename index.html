@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <ul id="list">
+        <li>tea</li>
+        <li>water</li>
+        <li>coffee</li>
+        <li>bear</li>
+    </ul>
+
+    <script>
+        // To use your own shortcut for Jquery with the help of noconflict function
+        var j = $.noConflict();
+        j("p").hide()
+
+        j("#list").append("<li>soda</li>");
+        j("#list").empty();   // this will only delete elements of list not remove entire list 
+        j("#list").before("<h1>This is a paragraph comes by before function</h1>");
+        j("#list").after("<p>This is a paragraph comes by after function</p>");
+        j("#list").prepend("<li>cold drink</li>");
+        // j("#list").remove();   // if we use this line before list then we wont get output
+        
+
+        
+    </script>
+</body>
+
+</html>
